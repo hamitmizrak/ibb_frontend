@@ -183,3 +183,111 @@ let data16 = () => {
     }
 }
 //data16()
+
+//diziler(array)
+let data17 = () => {
+    //diziler Sıfırıncı indiste başlar
+    let array = ["javascript", 44, true, 34.44, "java", "microservis"];
+    array[6] = "JSF";
+    //JAVA
+    // Object[] deneme=new Object[5];
+    // deneme[0]=11;
+    // deneme[1]="javascript";
+    // deneme[2]=true;
+
+    //console.log(array)
+    //console.log(typeof  array);
+    //for 
+    // for (let i = 0; i < 4; i++) {
+    //     console.log(array[i])
+    // }
+
+    // sona 1 eleman ekle
+    // array.push("son+");
+
+    // // başa 1 eleman ekle
+    // array.unshift("baş+")
+
+    // // sona 1 eleman çıkar
+    // array.pop();
+    // array.shift();
+    // for (let i = 0; i < array.length; i++) {
+    //     console.log(array[i])
+    // }
+
+    //FORIN
+    for (let temp in array) {
+        console.log(temp + " ==>" + array[temp])
+    }
+    console.log("*************")
+    //FOROF
+    for (let temp of array) {
+        console.log(temp)
+    }
+}
+//data17()
+
+//name,password
+let data18 = () => {
+    let obj = {
+        "name": "Hamit",
+        surname: 'Mızrak',
+        company: "Ecodation INC",
+        tech: ["Android", "Java", "Javascript", "Devops", "Microservis", "C#", "React Native"],
+        javascript: {
+            "version1": "Data1",
+            "version2": "Data2",
+        }
+    };
+
+    //console.log(obj)
+    //console.log(typeof obj);
+    console.log(obj);
+    console.log(obj.name);
+    console.log(obj.surname);
+    console.log(obj.company.toUpperCase());
+    console.log(obj.tech[2]);
+    console.log(obj.javascript.version1);
+}
+//data18();
+
+// 5 tane 1-10 arasında rastgele sayılar olsun.
+// bu sayılardan çift olanlara +5 ekleyelim
+let data19 = () => {
+    let array = [];
+    for (let i = 0; i < 5; i++) {
+        let rnd = Math.floor(Math.random() * 10 + 1) ;
+        array[i] = rnd;
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]%2==0){
+            console.log(array[i]);
+        }
+    }
+
+    console.log("*****************");
+    for (let index = 0; index < array.length; index++) {
+        console.log(array[index]);
+    }
+}
+//data19();
+
+
+let data20 = () => {
+    let array = [];
+    for (let i = 0; i < 5; i++) {
+        let rnd = Math.floor(Math.random() * 10 + 1) ;
+        array[i] = rnd;
+    }
+    return array;
+}
+
+let data21 = () => {
+    let data=data20().filter(
+        (value)=>{return value%2==0}
+    ).forEach((value)=>{
+        console.log(value)
+    });
+}
+data21() 
