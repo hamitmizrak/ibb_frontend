@@ -82,7 +82,6 @@
 //     }else{
 //         console.log("pozitif");
 //     }
-
 // }
 // twoNumberSum7();
 
