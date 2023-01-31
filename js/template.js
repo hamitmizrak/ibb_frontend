@@ -256,12 +256,12 @@ let data18 = () => {
 let data19 = () => {
     let array = [];
     for (let i = 0; i < 5; i++) {
-        let rnd = Math.floor(Math.random() * 10 + 1) ;
+        let rnd = Math.floor(Math.random() * 10 + 1);
         array[i] = rnd;
     }
 
     for (let i = 0; i < array.length; i++) {
-        if(array[i]%2==0){
+        if (array[i] % 2 == 0) {
             console.log(array[i]);
         }
     }
@@ -277,17 +277,47 @@ let data19 = () => {
 let data20 = () => {
     let array = [];
     for (let i = 0; i < 5; i++) {
-        let rnd = Math.floor(Math.random() * 10 + 1) ;
+        let rnd = Math.floor(Math.random() * 10 + 1);
         array[i] = rnd;
     }
     return array;
 }
 
 let data21 = () => {
-    let data=data20().filter(
-        (value)=>{return value%2==0}
-    ).forEach((value)=>{
+    let data = data20().filter(
+        (value) => { return value % 2 == 0 }
+    ).forEach((value) => {
         console.log(value)
     });
 }
-data21() 
+//data21() 
+
+//Form Login 
+
+$(function () {
+
+    $("#btnSubmit").click(function () {
+
+        let user_email, user_password;
+        user_email = $("#user_email").val();
+        user_email = jQuery.trim(user_email);
+
+        user_password = $("#user_password").val();
+        user_password = jQuery.trim(user_password);
+
+        if (user_email == "") {
+            $("#validation_email").html("Email boş geçemezsiniz")
+        } else if (validateEmail(user_email) == false) {
+            $("#validation_email").html("Email uygun formatta yazmadınız")
+        }
+
+        if (user_password == "") {
+            $("#validation_password").html("Şifre boş geçemezsiniz")
+        }
+
+        let validateEmail = (user_email) => {
+            const regex =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return regex.test(user_email);
+        }
+    });
+})

@@ -16,6 +16,10 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- finish codes -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
   <!-- <script>
 window.alert("deneme")
     </script> -->
@@ -89,11 +93,7 @@ window.alert("deneme")
   </div>
 
 
-  <!-- Optional: Place to the bottom of scripts -->
-  <script>
-    const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
 
-  </script>
 
   <main>
 
@@ -102,30 +102,26 @@ window.alert("deneme")
         <div class="col-2"></div>
         <div class="col-8">
           <form>
-            <div class="mb-3 mt-5"> 
+            <div class="mb-3 mt-5">
               <h1 class="text-center text-uppercase">Login</h1>
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp1">
-              <div id="emailHelp1" class="form-text text-danger">Email</div>
+              <label for="user_email" class="form-label">Email address</label>
+              <input type="text" class="form-control" id="user_email" name="user_email" required>
+              <div id="validation_email" class="form-text text-danger"></div>
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" aria-describedby="emailHelp1">
-              <div id="emailHelp" class="form-text text-danger">password</div>
+              <label for="user_password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="user_password" name="user_password" required>
+              <div id="validation_password" class="form-text text-danger"></div>
             </div>
             <div class="mb-3 form-check">
-            <button type="reset" class="btn btn-danger" id="btnSubmit" name="btnSubmit">Reset</button>
-            <button type="submit" class="btn btn-primary" id="btnSubmit" name="btnSubmit">Submit</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+              <button type="submit" class="btn btn-primary" id="btnSubmit" name="btnSubmit">Submit</button>
           </form>
         </div>
         <div class="col-2"></div>
       </div>
     </div>
-
-
-
   </main>
-
 
 
   <!-- finish codes -->
